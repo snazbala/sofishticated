@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`class PantryItemList extends _react.Component {
+    constructor(props) {
+        super(props);
+        this.state = { pantryItems: ['Flour', 'Sugar'] };
+        this.addPantryItem = this.addPantryItem.bind(this);
+        this.removePantryItem = this.removePantryItem.bind(this);
+    }
+
+    addPantryItem(newPantryItem) {
+        this.setState({ pantryItems: [...this.state.pantryItems, newPantryItem] });
+    }
+
+    removePantryItem(itemToRemove) {
+        const filteredPantryItems = this.state.pantryItems.filter(name => {
+            return name !== itemToRemove;
+        });
+        this.setState({ pantryItems: filteredPantryItems });
+    }
+
+    renderPantryItems() {
+        return this.state.pantryItems.map(name =>
+        _react2.default.createElement(_PantryItem2.default, {
+            key: name,
+            name: name,
+            removePantryItem: this.removePantryItem, __source: { fileName: _jsxFileName, lineNumber: 27 }, __self: this }));
+
+
+    }
+
+    render() {
+        return (
+            _react2.default.createElement('div', { className: 'pantry-item-list', __source: { fileName: _jsxFileName, lineNumber: 37 }, __self: this },
+                _react2.default.createElement(_AddPantryItem2.default, { addPantryItem: this.addPantryItem, __source: { fileName: _jsxFileName, lineNumber: 38 }, __self: this }),
+                this.renderPantryItems()));
+
+
+    }} renders and matches our snapshot 1`] = `
+<div
+  className="pantry-item-list"
+>
+  <div
+    className="add-pantry-item"
+  >
+    <input
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+       
+    <button
+      onClick={[Function]}
+    >
+      Add New Item
+    </button>
+  </div>
+  <div
+    className="pantry-item"
+  >
+    Flour
+       
+    <button
+      className="remove"
+      onClick={[Function]}
+    >
+      Remove
+    </button>
+  </div>
+  <div
+    className="pantry-item"
+  >
+    Sugar
+       
+    <button
+      className="remove"
+      onClick={[Function]}
+    >
+      Remove
+    </button>
+  </div>
+</div>
+`;
