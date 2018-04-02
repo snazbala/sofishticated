@@ -4,3 +4,11 @@
     background: #91ffd6;
     text-align: left;
 }
+
+.input-field {
+    margin-right: 10px;
+}
+
+.label-padding {
+    margin-right: 5px;
+}

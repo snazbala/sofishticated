@@ -6,27 +6,39 @@ import './PantryItemList.css';
 class PantryItemList extends Component {
     constructor(props) {
         super(props);
-        this.state = { pantryItems: ['Flour', 'Sugar'] };
+        this.state = {
+            items: [
+                {
+                    name: 'Flour',
+                    quantity: '12',
+                },
+                {
+                    name: 'Sugar',
+                    quantity: '2',
+                }
+            ]
+        };
         this.addPantryItem = this.addPantryItem.bind(this);
         this.removePantryItem = this.removePantryItem.bind(this);
     }
 
     addPantryItem(newPantryItem) {
-        this.setState({ pantryItems: [...this.state.pantryItems, newPantryItem] });
+        this.setState({ items: [...this.state.items, newPantryItem] });
     }
 
     removePantryItem(itemToRemove) {
-        const filteredPantryItems = this.state.pantryItems.filter(name => {
-            return name !== itemToRemove;
+        const filteredPantryItems = this.state.items.filter(item => {
+            return item.name !== itemToRemove;
         });
-        this.setState({ pantryItems: filteredPantryItems });
+        this.setState({ items: filteredPantryItems });
     }
 
     renderPantryItems() {
-        return this.state.pantryItems.map(name => (
+        return this.state.items.map((item, index) => (
             <PantryItem
-                key={name}
-                name={name}
+                key={item.name+index}
+                name={item.name}
+                quantity={item.quantity}
                 removePantryItem={this.removePantryItem}
             />
         ));

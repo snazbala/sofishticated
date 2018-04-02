@@ -4,30 +4,45 @@ import './AddPantryItem.css';
 class AddPantryItem extends Component {
     constructor(props) {
         super(props);
-        this.state = { pantryItem: '' };
+        this.state = {
+            name: '',
+            quantity: '',
+        };
         this.handleInput = this.handleInput.bind(this);
-        this.addPantryItem = this.addPantryItem.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleInput(event) {
-        this.setState({ pantryItem: event.target.value });
+        this.setState({[event.target.name]: event.target.value})
     }
 
-    addPantryItem() {
-        this.props.addPantryItem(this.state.pantryItem);
-        this.setState({ pantryItem: '' });
+    handleSubmit() {
+        this.props.addPantryItem({
+            name: this.state.name,
+            quantity: this.state.quantity,
+        });
     }
 
     render() {
         return (
             <div className="add-pantry-item">
+                <label className="label-padding">Name</label>
                 <input
+                    name="name"
+                    className="input-field"
                     type="text"
                     onChange={this.handleInput}
-                    value={this.state.pantryItem}
+                    value={this.state.name}
                 />
-                &nbsp; &nbsp;
-                <button onClick={this.addPantryItem}>Add New Item</button>
+                <label className="label-padding">Quantity Remaining</label>
+                <input
+                    name="quantity"
+                    className="input-field"
+                    type="text"
+                    onChange={this.handleInput}
+                    value={this.state.quantity}
+                />
+                <button onClick={this.handleSubmit}>Add New Item</button>
             </div>
         );
     }

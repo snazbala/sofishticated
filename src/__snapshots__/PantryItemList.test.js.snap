@@ -3,36 +3,48 @@
 exports[`class PantryItemList extends _react.Component {
     constructor(props) {
         super(props);
-        this.state = { pantryItems: ['Flour', 'Sugar'] };
+        this.state = {
+            items: [
+            {
+                name: 'Flour',
+                quantity: '12' },
+
+            {
+                name: 'Sugar',
+                quantity: '2' }] };
+
+
+
         this.addPantryItem = this.addPantryItem.bind(this);
         this.removePantryItem = this.removePantryItem.bind(this);
     }
 
     addPantryItem(newPantryItem) {
-        this.setState({ pantryItems: [...this.state.pantryItems, newPantryItem] });
+        this.setState({ items: [...this.state.items, newPantryItem] });
     }
 
     removePantryItem(itemToRemove) {
-        const filteredPantryItems = this.state.pantryItems.filter(name => {
-            return name !== itemToRemove;
+        const filteredPantryItems = this.state.items.filter(item => {
+            return item.name !== itemToRemove;
         });
-        this.setState({ pantryItems: filteredPantryItems });
+        this.setState({ items: filteredPantryItems });
     }
 
     renderPantryItems() {
-        return this.state.pantryItems.map(name =>
+        return this.state.items.map((item, index) =>
         _react2.default.createElement(_PantryItem2.default, {
-            key: name,
-            name: name,
-            removePantryItem: this.removePantryItem, __source: { fileName: _jsxFileName, lineNumber: 27 }, __self: this }));
+            key: item.name + index,
+            name: item.name,
+            quantity: item.quantity,
+            removePantryItem: this.removePantryItem, __source: { fileName: _jsxFileName, lineNumber: 38 }, __self: this }));
 
 
     }
 
     render() {
         return (
-            _react2.default.createElement('div', { className: 'pantry-item-list', __source: { fileName: _jsxFileName, lineNumber: 37 }, __self: this },
-                _react2.default.createElement(_AddPantryItem2.default, { addPantryItem: this.addPantryItem, __source: { fileName: _jsxFileName, lineNumber: 38 }, __self: this }),
+            _react2.default.createElement('div', { className: 'pantry-item-list', __source: { fileName: _jsxFileName, lineNumber: 49 }, __self: this },
+                _react2.default.createElement(_AddPantryItem2.default, { addPantryItem: this.addPantryItem, __source: { fileName: _jsxFileName, lineNumber: 50 }, __self: this }),
                 this.renderPantryItems()));
 
 
@@ -43,12 +55,30 @@ exports[`class PantryItemList extends _react.Component {
   <div
     className="add-pantry-item"
   >
+    <label
+      className="label-padding"
+    >
+      Name
+    </label>
     <input
+      className="input-field"
+      name="name"
       onChange={[Function]}
       type="text"
       value=""
     />
-       
+    <label
+      className="label-padding"
+    >
+      Quantity Remaining
+    </label>
+    <input
+      className="input-field"
+      name="quantity"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
     <button
       onClick={[Function]}
     >
@@ -59,6 +89,8 @@ exports[`class PantryItemList extends _react.Component {
     className="pantry-item"
   >
     Flour
+     
+    12
        
     <button
       className="remove"
@@ -71,6 +103,8 @@ exports[`class PantryItemList extends _react.Component {
     className="pantry-item"
   >
     Sugar
+     
+    2
        
     <button
       className="remove"

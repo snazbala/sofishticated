@@ -4,19 +4,19 @@ exports[`class PantryItem extends _react.Component {
     constructor(props) {
         super(props);
         this.state = {};
-        this.removePantryItem = this.removePantryItem.bind(this);
+        this.removePantryItemHandler = this.removePantryItemHandler.bind(this);
     }
 
-    removePantryItem() {
+    removePantryItemHandler() {
         this.props.removePantryItem(this.props.name);
     }
 
     render() {
         return (
             _react2.default.createElement('div', { className: 'pantry-item', __source: { fileName: _jsxFileName, lineNumber: 17 }, __self: this },
-                this.props.name, '\\xA0 \\xA0',
+                this.props.name, ' ', this.props.quantity, '\\xA0 \\xA0',
 
-                _react2.default.createElement('button', { className: 'remove', onClick: this.removePantryItem, __source: { fileName: _jsxFileName, lineNumber: 20 }, __self: this }, 'Remove')));
+                _react2.default.createElement('button', { className: 'remove', onClick: this.removePantryItemHandler, __source: { fileName: _jsxFileName, lineNumber: 20 }, __self: this }, 'Remove')));
 
 
     }} renders and matches our snapshot 1`] = `
@@ -24,6 +24,7 @@ exports[`class PantryItem extends _react.Component {
   className="pantry-item"
 >
   Flour
+   
      
   <button
     className="remove"

@@ -5,19 +5,19 @@ class PantryItem extends Component {
     constructor(props) {
         super(props);
         this.state= {};
-        this.removePantryItem = this.removePantryItem.bind(this);
+        this.removePantryItemHandler = this.removePantryItemHandler.bind(this);
     }
 
-    removePantryItem() {
+    removePantryItemHandler() {
         this.props.removePantryItem(this.props.name);
     }
 
     render() {
         return (
             <div className="pantry-item">
-                {this.props.name}
+                {this.props.name} {this.props.quantity}
                 &nbsp; &nbsp;
-                <button className="remove" onClick={this.removePantryItem}>Remove</button>
+                <button className="remove" onClick={this.removePantryItemHandler}>Remove</button>
             </div>
         );
     }
