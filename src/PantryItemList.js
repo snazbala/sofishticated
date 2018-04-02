@@ -10,11 +10,13 @@ class PantryItemList extends Component {
             items: [
                 {
                     name: 'Flour',
-                    quantity: '12',
+                    quantity: '12 cups',
+                    shelf: 'Pantry',
                 },
                 {
                     name: 'Sugar',
-                    quantity: '2',
+                    quantity: '2 cups',
+                    shelf: 'Pantry',
                 }
             ]
         };
@@ -39,6 +41,7 @@ class PantryItemList extends Component {
                 key={item.name+index}
                 name={item.name}
                 quantity={item.quantity}
+                shelf={item.shelf}
                 removePantryItem={this.removePantryItem}
             />
         ));

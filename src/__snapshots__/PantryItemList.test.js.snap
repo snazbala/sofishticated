@@ -7,11 +7,13 @@ exports[`class PantryItemList extends _react.Component {
             items: [
             {
                 name: 'Flour',
-                quantity: '12' },
+                quantity: '12 cups',
+                shelf: 'Pantry' },
 
             {
                 name: 'Sugar',
-                quantity: '2' }] };
+                quantity: '2 cups',
+                shelf: 'Pantry' }] };
 
 
 
@@ -36,15 +38,16 @@ exports[`class PantryItemList extends _react.Component {
             key: item.name + index,
             name: item.name,
             quantity: item.quantity,
-            removePantryItem: this.removePantryItem, __source: { fileName: _jsxFileName, lineNumber: 38 }, __self: this }));
+            shelf: item.shelf,
+            removePantryItem: this.removePantryItem, __source: { fileName: _jsxFileName, lineNumber: 40 }, __self: this }));
 
 
     }
 
     render() {
         return (
-            _react2.default.createElement('div', { className: 'pantry-item-list', __source: { fileName: _jsxFileName, lineNumber: 49 }, __self: this },
-                _react2.default.createElement(_AddPantryItem2.default, { addPantryItem: this.addPantryItem, __source: { fileName: _jsxFileName, lineNumber: 50 }, __self: this }),
+            _react2.default.createElement('div', { className: 'pantry-item-list', __source: { fileName: _jsxFileName, lineNumber: 52 }, __self: this },
+                _react2.default.createElement(_AddPantryItem2.default, { addPantryItem: this.addPantryItem, __source: { fileName: _jsxFileName, lineNumber: 53 }, __self: this }),
                 this.renderPantryItems()));
 
 
@@ -55,43 +58,88 @@ exports[`class PantryItemList extends _react.Component {
   <div
     className="add-pantry-item"
   >
-    <label
-      className="label-padding"
-    >
-      Name
-    </label>
-    <input
-      className="input-field"
-      name="name"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <label
-      className="label-padding"
-    >
-      Quantity Remaining
-    </label>
-    <input
-      className="input-field"
-      name="quantity"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <button
-      onClick={[Function]}
-    >
-      Add New Item
-    </button>
+    <div>
+      <label
+        className="label-padding"
+      >
+        Item Name
+      </label>
+      <input
+        className="input-field"
+        name="name"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+    <div>
+      <label
+        className="label-padding"
+      >
+        Quantity Remaining
+      </label>
+      <input
+        className="input-field"
+        name="quantity"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+    <div>
+      <select
+        name="shelf"
+        onChange={[Function]}
+        type="select"
+        value=""
+      >
+        <option>
+          Select a shelf
+        </option>
+        <option>
+          Bakery
+        </option>
+        <option>
+          Dairy/Deli
+        </option>
+        <option>
+          Freezer
+        </option>
+        <option>
+          Pantry
+        </option>
+        <option>
+          Produce
+        </option>
+        <option>
+          Other
+        </option>
+      </select>
+    </div>
+    <div>
+      <button
+        className="btn"
+        onClick={[Function]}
+      >
+        Add New Item
+      </button>
+    </div>
   </div>
   <div
     className="pantry-item"
   >
-    Flour
-     
-    12
-       
+    <div>
+      Name: 
+      Flour
+    </div>
+    <div>
+      Quantity Remaining: 
+      12 cups
+    </div>
+    <div>
+      Shelf: 
+      Pantry
+    </div>
     <button
       className="remove"
       onClick={[Function]}
@@ -102,10 +150,18 @@ exports[`class PantryItemList extends _react.Component {
   <div
     className="pantry-item"
   >
-    Sugar
-     
-    2
-       
+    <div>
+      Name: 
+      Sugar
+    </div>
+    <div>
+      Quantity Remaining: 
+      2 cups
+    </div>
+    <div>
+      Shelf: 
+      Pantry
+    </div>
     <button
       className="remove"
       onClick={[Function]}

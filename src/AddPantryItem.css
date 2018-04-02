@@ -3,10 +3,16 @@
     padding: 50px;
     background: #91ffd6;
     text-align: left;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .input-field {
     margin-right: 10px;
+}
+
+.btn {
+    margin-left: 10px;
 }
 
 .label-padding {

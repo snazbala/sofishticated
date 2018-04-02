@@ -15,8 +15,9 @@ class PantryItem extends Component {
     render() {
         return (
             <div className="pantry-item">
-                {this.props.name} {this.props.quantity}
-                &nbsp; &nbsp;
+                <div>Name: {this.props.name}</div>
+                <div>Quantity Remaining: {this.props.quantity}</div>
+                <div>Shelf: {this.props.shelf}</div>
                 <button className="remove" onClick={this.removePantryItemHandler}>Remove</button>
             </div>
         );

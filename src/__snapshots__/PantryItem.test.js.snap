@@ -14,18 +14,26 @@ exports[`class PantryItem extends _react.Component {
     render() {
         return (
             _react2.default.createElement('div', { className: 'pantry-item', __source: { fileName: _jsxFileName, lineNumber: 17 }, __self: this },
-                this.props.name, ' ', this.props.quantity, '\\xA0 \\xA0',
-
-                _react2.default.createElement('button', { className: 'remove', onClick: this.removePantryItemHandler, __source: { fileName: _jsxFileName, lineNumber: 20 }, __self: this }, 'Remove')));
+                _react2.default.createElement('div', { __source: { fileName: _jsxFileName, lineNumber: 18 }, __self: this }, 'Name: ', this.props.name),
+                _react2.default.createElement('div', { __source: { fileName: _jsxFileName, lineNumber: 19 }, __self: this }, 'Quantity Remaining: ', this.props.quantity),
+                _react2.default.createElement('div', { __source: { fileName: _jsxFileName, lineNumber: 20 }, __self: this }, 'Shelf: ', this.props.shelf),
+                _react2.default.createElement('button', { className: 'remove', onClick: this.removePantryItemHandler, __source: { fileName: _jsxFileName, lineNumber: 21 }, __self: this }, 'Remove')));
 
 
     }} renders and matches our snapshot 1`] = `
 <div
   className="pantry-item"
 >
-  Flour
-   
-     
+  <div>
+    Name: 
+    Flour
+  </div>
+  <div>
+    Quantity Remaining: 
+  </div>
+  <div>
+    Shelf: 
+  </div>
   <button
     className="remove"
     onClick={[Function]}
