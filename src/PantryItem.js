@@ -18,6 +18,7 @@ class PantryItem extends Component {
                 <div>Name: {this.props.name}</div>
                 <div>Quantity Remaining: {this.props.quantity}</div>
                 <div>Shelf: {this.props.shelf}</div>
+                <div>Date Added: {this.props.dateAdded}</div>
                 <button className="remove" onClick={this.removePantryItemHandler}>Remove</button>
             </div>
         );

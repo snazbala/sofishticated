@@ -23,12 +23,17 @@ class AddPantryItem extends Component {
             name: this.state.name,
             quantity: this.state.quantity,
             shelf: this.state.shelf,
+            dateAdded: this.getDateToday(),
         });
         this.resetForm()
     }
 
     resetForm() {
         this.setState(this.baseState);
+    }
+
+    getDateToday() {
+        return new Date().toDateString();
     }
 
     render() {

@@ -8,12 +8,14 @@ exports[`class PantryItemList extends _react.Component {
             {
                 name: 'Flour',
                 quantity: '12 cups',
-                shelf: 'Pantry' },
+                shelf: 'Pantry',
+                dateAdded: 'Mon Apr 02 2018' },
 
             {
                 name: 'Sugar',
                 quantity: '2 cups',
-                shelf: 'Pantry' }] };
+                shelf: 'Pantry',
+                dateAdded: 'Fri Mar 23 2018' }] };
 
 
 
@@ -39,15 +41,16 @@ exports[`class PantryItemList extends _react.Component {
             name: item.name,
             quantity: item.quantity,
             shelf: item.shelf,
-            removePantryItem: this.removePantryItem, __source: { fileName: _jsxFileName, lineNumber: 40 }, __self: this }));
+            dateAdded: item.dateAdded,
+            removePantryItem: this.removePantryItem, __source: { fileName: _jsxFileName, lineNumber: 42 }, __self: this }));
 
 
     }
 
     render() {
         return (
-            _react2.default.createElement('div', { className: 'pantry-item-list', __source: { fileName: _jsxFileName, lineNumber: 52 }, __self: this },
-                _react2.default.createElement(_AddPantryItem2.default, { addPantryItem: this.addPantryItem, __source: { fileName: _jsxFileName, lineNumber: 53 }, __self: this }),
+            _react2.default.createElement('div', { className: 'pantry-item-list', __source: { fileName: _jsxFileName, lineNumber: 55 }, __self: this },
+                _react2.default.createElement(_AddPantryItem2.default, { addPantryItem: this.addPantryItem, __source: { fileName: _jsxFileName, lineNumber: 56 }, __self: this }),
                 this.renderPantryItems()));
 
 
@@ -140,6 +143,10 @@ exports[`class PantryItemList extends _react.Component {
       Shelf: 
       Pantry
     </div>
+    <div>
+      Date Added: 
+      Mon Apr 02 2018
+    </div>
     <button
       className="remove"
       onClick={[Function]}
@@ -161,6 +168,10 @@ exports[`class PantryItemList extends _react.Component {
     <div>
       Shelf: 
       Pantry
+    </div>
+    <div>
+      Date Added: 
+      Fri Mar 23 2018
     </div>
     <button
       className="remove"

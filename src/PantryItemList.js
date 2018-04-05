@@ -12,11 +12,13 @@ class PantryItemList extends Component {
                     name: 'Flour',
                     quantity: '12 cups',
                     shelf: 'Pantry',
+                    dateAdded: 'Mon Apr 02 2018'
                 },
                 {
                     name: 'Sugar',
                     quantity: '2 cups',
                     shelf: 'Pantry',
+                    dateAdded: 'Fri Mar 23 2018'
                 }
             ]
         };
@@ -42,6 +44,7 @@ class PantryItemList extends Component {
                 name={item.name}
                 quantity={item.quantity}
                 shelf={item.shelf}
+                dateAdded={item.dateAdded}
                 removePantryItem={this.removePantryItem}
             />
         ));
