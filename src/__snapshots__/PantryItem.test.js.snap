@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`class PantryItem extends _react.Component {
+    constructor(props) {
+        super(props);
+        this.state = {};
+        this.removePantryItemHandler = this.removePantryItemHandler.bind(this);
+    }
+
+    removePantryItemHandler() {
+        this.props.removePantryItem(this.props.name);
+    }
+
+    render() {
+        return (
+            _react2.default.createElement('div', { className: 'pantry-item', __source: { fileName: _jsxFileName, lineNumber: 17 }, __self: this },
+                _react2.default.createElement('div', { __source: { fileName: _jsxFileName, lineNumber: 18 }, __self: this }, 'Name: ', this.props.name),
+                _react2.default.createElement('div', { __source: { fileName: _jsxFileName, lineNumber: 19 }, __self: this }, 'Quantity Remaining: ', this.props.quantity),
+                _react2.default.createElement('div', { __source: { fileName: _jsxFileName, lineNumber: 20 }, __self: this }, 'Shelf: ', this.props.shelf),
+                _react2.default.createElement('div', { __source: { fileName: _jsxFileName, lineNumber: 21 }, __self: this }, 'Date Added: ', this.props.dateAdded),
+                _react2.default.createElement('button', { className: 'remove', onClick: this.removePantryItemHandler, __source: { fileName: _jsxFileName, lineNumber: 22 }, __self: this }, 'Remove')));
+
+
+    }} renders and matches our snapshot 1`] = `
+<div
+  className="pantry-item"
+>
+  <div>
+    Name: 
+    Flour
+  </div>
+  <div>
+    Quantity Remaining: 
+  </div>
+  <div>
+    Shelf: 
+  </div>
+  <div>
+    Date Added: 
+  </div>
+  <button
+    className="remove"
+    onClick={[Function]}
+  >
+    Remove
+  </button>
+</div>
+`;

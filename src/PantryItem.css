@@ -1,0 +1,10 @@
+.pantry-item {
+    border: 2px solid #FFFFFF;
+    text-align: left;
+    background: #FFFFFF;
+    color: #364d4f;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}

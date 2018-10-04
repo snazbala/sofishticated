@@ -1,0 +1,184 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`class PantryItemList extends _react.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            items: [
+            {
+                name: 'Flour',
+                quantity: '12 cups',
+                shelf: 'Pantry',
+                dateAdded: 'Mon Apr 02 2018' },
+
+            {
+                name: 'Sugar',
+                quantity: '2 cups',
+                shelf: 'Pantry',
+                dateAdded: 'Fri Mar 23 2018' }] };
+
+
+
+        this.addPantryItem = this.addPantryItem.bind(this);
+        this.removePantryItem = this.removePantryItem.bind(this);
+    }
+
+    addPantryItem(newPantryItem) {
+        this.setState({ items: [...this.state.items, newPantryItem] });
+    }
+
+    removePantryItem(itemToRemove) {
+        const filteredPantryItems = this.state.items.filter(item => {
+            return item.name !== itemToRemove;
+        });
+        this.setState({ items: filteredPantryItems });
+    }
+
+    renderPantryItems() {
+        return this.state.items.map((item, index) =>
+        _react2.default.createElement(_PantryItem2.default, {
+            key: item.name + index,
+            name: item.name,
+            quantity: item.quantity,
+            shelf: item.shelf,
+            dateAdded: item.dateAdded,
+            removePantryItem: this.removePantryItem, __source: { fileName: _jsxFileName, lineNumber: 42 }, __self: this }));
+
+
+    }
+
+    render() {
+        return (
+            _react2.default.createElement('div', { className: 'pantry-item-list', __source: { fileName: _jsxFileName, lineNumber: 55 }, __self: this },
+                _react2.default.createElement(_AddPantryItem2.default, { addPantryItem: this.addPantryItem, __source: { fileName: _jsxFileName, lineNumber: 56 }, __self: this }),
+                this.renderPantryItems()));
+
+
+    }} renders and matches our snapshot 1`] = `
+<div
+  className="pantry-item-list"
+>
+  <div
+    className="add-pantry-item"
+  >
+    <div>
+      <label
+        className="label-padding"
+      >
+        Item Name
+      </label>
+      <input
+        className="input-field"
+        name="name"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+    <div>
+      <label
+        className="label-padding"
+      >
+        Quantity Remaining
+      </label>
+      <input
+        className="input-field"
+        name="quantity"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+    <div>
+      <select
+        name="shelf"
+        onChange={[Function]}
+        type="select"
+        value=""
+      >
+        <option>
+          Select a shelf
+        </option>
+        <option>
+          Bakery
+        </option>
+        <option>
+          Dairy/Deli
+        </option>
+        <option>
+          Freezer
+        </option>
+        <option>
+          Pantry
+        </option>
+        <option>
+          Produce
+        </option>
+        <option>
+          Other
+        </option>
+      </select>
+    </div>
+    <div>
+      <button
+        className="btn"
+        onClick={[Function]}
+      >
+        Add New Item
+      </button>
+    </div>
+  </div>
+  <div
+    className="pantry-item"
+  >
+    <div>
+      Name: 
+      Flour
+    </div>
+    <div>
+      Quantity Remaining: 
+      12 cups
+    </div>
+    <div>
+      Shelf: 
+      Pantry
+    </div>
+    <div>
+      Date Added: 
+      Mon Apr 02 2018
+    </div>
+    <button
+      className="remove"
+      onClick={[Function]}
+    >
+      Remove
+    </button>
+  </div>
+  <div
+    className="pantry-item"
+  >
+    <div>
+      Name: 
+      Sugar
+    </div>
+    <div>
+      Quantity Remaining: 
+      2 cups
+    </div>
+    <div>
+      Shelf: 
+      Pantry
+    </div>
+    <div>
+      Date Added: 
+      Fri Mar 23 2018
+    </div>
+    <button
+      className="remove"
+      onClick={[Function]}
+    >
+      Remove
+    </button>
+  </div>
+</div>
+`;
